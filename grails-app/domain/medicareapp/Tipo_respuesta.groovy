@@ -5,6 +5,8 @@ class Tipo_respuesta {
     String nombre
     String descripcion
 
+    static hasMany = [respuesta:Respuesta]
+
     static constraints = {
         idTipoRespuesta nullable:false
         

@@ -14,7 +14,10 @@ class Usuario {
     Date f_creacion
     Date f_mod
     int tipo
-    
+
+    static  hasMany = [tipo_Usuario: Tipo_Usuario, categoria: Categoria];
+    static  hasOne = [encuesta: Encuesta];
+
     static constraints = {
         
         idUsuario nullable:false

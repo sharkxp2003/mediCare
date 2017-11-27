@@ -7,6 +7,10 @@ class Categoria {
     Date f_mod
     int encuesta
 
+
+    static belongsTo =[usuario: Usuario]
+    static hasMany = [pregunta: Pregunta]
+
     static constraints = {
         
         idCategoria nullable:false

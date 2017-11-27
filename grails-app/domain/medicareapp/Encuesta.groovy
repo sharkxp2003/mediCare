@@ -7,6 +7,9 @@ class Encuesta {
     Date f_creacion
     Date f_mod
     int usuario
+
+    static belongsTo = [usuario: Usuario];
+
     
     static constraints = {
         idEncuesta nullable:false
