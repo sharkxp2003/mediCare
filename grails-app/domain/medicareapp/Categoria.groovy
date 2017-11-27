@@ -8,5 +8,13 @@ class Categoria {
     int encuesta
 
     static constraints = {
+        
+        idCategoria nullable:false
+        encuesta nullable:false
+        
+        nombre blank:false
+        f_creacion blank:false
+        f_mod blank:false
+        
     }
 }

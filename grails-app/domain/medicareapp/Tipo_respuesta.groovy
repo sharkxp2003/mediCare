@@ -6,5 +6,10 @@ class Tipo_respuesta {
     String descripcion
 
     static constraints = {
+        idTipoRespuesta nullable:false
+        
+        nombre blank:false
+        descripcion blank:false
+       
     }
 }

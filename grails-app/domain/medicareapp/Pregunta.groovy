@@ -8,5 +8,11 @@ class Pregunta {
     int categoria
     
     static constraints = {
+        idPregunta nullable:false
+        categoria nullable:false
+        
+        nombre blank:false
+        f_creacion blank:false
+        f_mod blank:false
     }
 }

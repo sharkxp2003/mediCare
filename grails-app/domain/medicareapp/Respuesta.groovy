@@ -9,5 +9,12 @@ class Respuesta {
     int tipo
     
     static constraints = {
+        idRespuesta nullable:false
+        pregunta nullable:false
+        tipo nullable:false
+        
+        nombre blank:false
+        f_creacion blank:false
+        f_mod blank:false
     }
 }
