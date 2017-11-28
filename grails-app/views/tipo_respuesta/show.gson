@@ -1,0 +1,8 @@
+import medicareapp.Tipo_respuesta
+
+
+model {
+    Tipo_respuesta tipo_respuesta
+}
+
+json tmpl.tipo_respuesta(tipo_respuesta)

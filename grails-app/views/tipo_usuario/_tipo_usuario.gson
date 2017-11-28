@@ -1,0 +1,9 @@
+
+import medicareapp.Tipo_usuario
+
+model {
+    Tipo_usuario tipo_usuario
+}
+
+json g.render(tipo_usuario)
+

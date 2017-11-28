@@ -1,0 +1,8 @@
+import medicareapp.Tipo_usuario
+
+model {
+    Iterable<Tipo_usuario> tipo_usuarioList
+}
+
+json tmpl.tipo_usuario(tipo_usuarioList ?: [])
+

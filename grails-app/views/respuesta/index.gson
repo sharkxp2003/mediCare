@@ -1,0 +1,8 @@
+import medicareapp.Respuesta
+
+model {
+    Iterable<Respuesta> respuestaList
+}
+
+json tmpl.respuesta(respuestaList ?: [])
+

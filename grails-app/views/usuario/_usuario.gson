@@ -1,0 +1,8 @@
+
+import medicareapp.Usuario
+
+model {
+    Usuario usuario
+}
+
+json g.render(usuario)

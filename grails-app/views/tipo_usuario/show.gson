@@ -1,0 +1,7 @@
+import medicareapp.Tipo_usuario
+
+model {
+    Tipo_usuario tipo_usuario
+}
+
+json tmpl.tipo_usuario(tipo_usuario)
