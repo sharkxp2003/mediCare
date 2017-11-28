@@ -15,6 +15,12 @@ class UrlMappings {
         "/encuesta"(resources:"Encuesta.Encuesta")
         "/pregunta"(resources:"Pregunta.Pregunta")
 
+        "/respuesta"(resources:"Respuesta.Respuesta")
+        "/tipoRespuesta"(resources:"Tipo_respuesta.Tipo_respuesta")
+        "/tipoUsuario"(resources:"Tipo_usuario.Tipo_usuario")
+        "/usuario"(resources:"Usuario.Usuario")
+
+
         "500"(view: '/error')
         "404"(view: '/notFound')
     }

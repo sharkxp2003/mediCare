@@ -5,7 +5,7 @@ import grails.rest.*
 import grails.converters.*
 import medicareapp.Pregunta
 
-class PreguntaController extends RestfulController{
+class PreguntaController extends RestfulController {
 	static responseFormats = ['json']
     PreguntaController(){
         super(Pregunta)

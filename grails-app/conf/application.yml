@@ -79,7 +79,7 @@ dataSource:
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
     username: root
-    password: eferrer686
+    password: root
 
 environments:
     development:
