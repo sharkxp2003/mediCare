@@ -11,9 +11,9 @@ class UrlMappings {
         patch "/$controller/$id(.$format)?"(action:"patch")
 
         "/"(controller: 'application', action:'index')
-        "/categoria"(resources:"medicareapp.Categoria")
-        "/encuesta"(resources:"medicareapp.Encuesta")
-        "/pregunta"(resources:"medicareapp.Pregunta")
+        "/categoria"(resources:"Categoria.Categoria")
+        "/encuesta"(resources:"Encuesta.Encuesta")
+        "/pregunta"(resources:"Pregunta.Pregunta")
 
         "500"(view: '/error')
         "404"(view: '/notFound')
