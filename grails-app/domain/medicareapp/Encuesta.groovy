@@ -1,14 +1,17 @@
 package medicareapp
+import grails.rest.Resource
 
+@Resource(readOnly = false, formats = ['json'])
 class Encuesta {
+
     int idEncuesta
     String uuid
     String nombre
     Date f_creacion
     Date f_mod
-    int usuario
 
-    static belongsTo = [usuario: Usuario];
+    static belongsTo = [categoria: Categoria]
+    static hasMany = [usuario: Usuario]
 
     
     static constraints = {

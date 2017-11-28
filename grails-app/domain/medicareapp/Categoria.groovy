@@ -1,15 +1,18 @@
 package medicareapp
 
+import grails.rest.Resource
+
+@Resource(readOnly = false, formats = ['json'])
 class Categoria {
     int idCategoria
     String nombre
     Date f_creacion
     Date f_mod
-    int encuesta
+
 
 
     static belongsTo =[usuario: Usuario]
-    static hasMany = [pregunta: Pregunta]
+    static hasMany = [encuesta: Encuesta,pregunta: Pregunta]
 
     static constraints = {
         
