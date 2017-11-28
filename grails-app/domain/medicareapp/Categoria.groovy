@@ -11,8 +11,8 @@ class Categoria {
 
 
 
-    static belongsTo =[usuario: Usuario]
-    static hasMany = [encuesta: Encuesta,pregunta: Pregunta]
+    static belongsTo =[encuesta: Encuesta]
+    static hasMany = [pregunta: Pregunta]
 
     static constraints = {
         

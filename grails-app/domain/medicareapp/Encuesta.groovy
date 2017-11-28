@@ -10,8 +10,8 @@ class Encuesta {
     Date f_creacion
     Date f_mod
 
-    static belongsTo = [categoria: Categoria]
-    static hasMany = [usuario: Usuario]
+    static hasMany = [categoria: Categoria]
+    static belongsTo = [usuario: Usuario]
 
     
     static constraints = {
