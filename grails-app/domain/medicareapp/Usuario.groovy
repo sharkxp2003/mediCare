@@ -28,7 +28,7 @@ class Usuario {
         ine nullable:false
         username nullable:false
 
-        
+        /*
         nombre blank:false
         apellido1 blank:false
         apellido2 blank:false
@@ -37,5 +37,6 @@ class Usuario {
         f_nacimiento blank:false
         f_creacion blank:false
         f_mod blank:false
+        */
     }
 }
