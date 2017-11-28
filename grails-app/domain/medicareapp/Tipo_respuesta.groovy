@@ -10,8 +10,8 @@ class Tipo_respuesta {
     static constraints = {
 
         
-        nombre blank:false
-        descripcion blank:false
+        nombre nullable:true
+        descripcion nullable:true
        
     }
 }
