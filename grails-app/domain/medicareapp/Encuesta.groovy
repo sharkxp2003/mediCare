@@ -19,10 +19,10 @@ class Encuesta {
 
         usuario nullable:false
         
-        uuid blank:false
-        nombre blank:false
-        f_creacion blank:false
-        f_mod blank:false
+        uuid nullable:true
+        nombre nullable:true
+        f_creacion nullable:true
+        f_mod nullable:true
         
         
     }

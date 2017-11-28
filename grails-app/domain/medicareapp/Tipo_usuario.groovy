@@ -12,7 +12,7 @@ class Tipo_usuario {
     static constraints = {
 
         
-        nombre blank:false
-        descripcion blank:false
+        nombre nullable:true
+        descripcion nullable:true
     }
 }

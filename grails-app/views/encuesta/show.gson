@@ -1,0 +1,7 @@
+import medicareapp.Encuesta
+
+model {
+    Encuesta encuesta
+}
+
+json tmpl.encuesta(encuesta)

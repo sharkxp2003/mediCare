@@ -28,15 +28,14 @@ class Usuario {
         ine nullable:false
         username nullable:false
 
-        /*
-        nombre blank:false
-        apellido1 blank:false
-        apellido2 blank:false
-        password blank:false
-        email blank:false
-        f_nacimiento blank:false
-        f_creacion blank:false
-        f_mod blank:false
-        */
+        
+        nombre nullable:true
+        apellido1 nullable:true
+        apellido2 nullable:true
+        password nullable:true
+        email nullable:true
+        f_nacimiento nullable:true
+        f_creacion nullable:true
+        f_mod nullable:true
     }
 }

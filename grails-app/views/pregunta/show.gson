@@ -4,4 +4,4 @@ model {
     Pregunta pregunta
 }
 
-json tmpl.categoria(pregunta)
+json tmpl.pregunta(pregunta)

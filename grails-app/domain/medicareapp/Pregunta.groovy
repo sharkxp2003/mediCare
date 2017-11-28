@@ -16,8 +16,8 @@ class Pregunta {
 
         categoria nullable:false
         
-        nombre blank:false
-        f_creacion blank:false
-        f_mod blank:false
+        nombre nullable:true
+        f_creacion nullable:true
+        f_mod nullable:true
     }
 }
