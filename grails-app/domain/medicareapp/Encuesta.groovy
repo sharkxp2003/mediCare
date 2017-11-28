@@ -1,10 +1,11 @@
 package medicareapp
-import grails.rest.Resource
+import grails.rest.*
 
 @Resource(readOnly = false, formats = ['json'])
+
 class Encuesta {
 
-    int idEncuesta
+
     String uuid
     String nombre
     Date f_creacion
@@ -15,7 +16,7 @@ class Encuesta {
 
     
     static constraints = {
-        idEncuesta nullable:false
+
         usuario nullable:false
         
         uuid blank:false

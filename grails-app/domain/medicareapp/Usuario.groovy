@@ -1,7 +1,7 @@
 package medicareapp
 
 class Usuario {
-    int idUsuario
+
     String nss
     String ine
     String nombre
@@ -13,18 +13,18 @@ class Usuario {
     Date f_nacimiento
     Date f_creacion
     Date f_mod
-    int tipo
 
-    static  hasMany = [tipo_Usuario: Tipo_Usuario, categoria: Categoria];
-    static  hasOne = [encuesta: Encuesta];
+
+    static  belongsTo = [tipo_Usuario: Tipo_usuario];
+    static  hasMany = [encuesta: Encuesta];
 
     static constraints = {
         
-        idUsuario nullable:false
+
         nss nullable:false
         ine nullable:false
         username nullable:false
-        tipo nullable:false
+
         
         nombre blank:false
         apellido1 blank:false

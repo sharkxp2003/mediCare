@@ -7,7 +7,7 @@ import medicareapp.Categoria
 
 
 
-class CategoriaController {
+class CategoriaController extends  RestfulController{
 	static responseFormats = ['json']
     CategoriaController(){
         super(Categoria)
