@@ -1,0 +1,7 @@
+import medicareapp.Pregunta
+
+model {
+    Pregunta pregunta
+}
+
+json g.render(pregunta)

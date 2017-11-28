@@ -1,0 +1,7 @@
+import medicareapp.Pregunta
+
+model {
+    Pregunta pregunta
+}
+
+json tmpl.categoria(pregunta)
