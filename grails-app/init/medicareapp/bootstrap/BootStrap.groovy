@@ -18,7 +18,7 @@ class BootStrap {
         def u2 = new Usuario(nss: "280439220",ine: "123203",nombre: "Alberto", apellido1: "Pérez", apellido2: "Gómez", username: "aPerezGom", password: "Ab123..",email:"aleberto.perez@gmail.com",f_creacion: mydate, f_nacimiento: mydate, f_mod: mydate, tipo_Usuario: tu2).save(failOnError:true)
         def u3 = new Usuario(nss: "280285220",ine: "123822",nombre: "Juan", apellido1: "Gómez", apellido2: "Pérez", username: "jPerezG", password: "Ab123..",email:"juan.perez@gmail.com",f_creacion: mydate, f_nacimiento: mydate, f_mod: mydate, tipo_Usuario: tu3).save(failOnError:true)
 
-        def en1 = new Encuesta(uuid: "2312923", nombre: "Encuesta1",f_creacion: mydate,f_mod: mydate, usuario: u2).save(failOnError:true)
+        def en1 = new Encuesta(uuid: "1312923", nombre: "Encuesta1",f_creacion: mydate,f_mod: mydate, usuario: u2).save(failOnError:true)
         def en2 = new Encuesta(uuid: "2332212", nombre: "Encuesta2",f_creacion: mydate,f_mod: mydate, usuario: u2).save(failOnError:true)
 
     }
