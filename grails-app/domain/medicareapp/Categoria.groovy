@@ -10,15 +10,13 @@ class Categoria {
     Date f_mod
 
 
-
-
     static belongsTo =[encuesta: Encuesta]
     static hasMany = [pregunta: Pregunta]
 
     static constraints = {
         
 
-        encuesta nullable:false
+        encuesta nullable:true
         
         nombre nullable:true
         f_creacion nullable:true

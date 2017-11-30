@@ -10,12 +10,11 @@ class Respuesta {
     Date f_mod
 
 
-    static belongsTo = [tipo: Tipo_respuesta, pregunta : Pregunta]
+    static belongsTo = [pregunta : Pregunta,tipo_respuesta:Tipo_respuesta]
 
     static constraints = {
 
-        pregunta nullable:false
-        tipo nullable:false
+        //pregunta nullable:false
         
         nombre nullable:true
         f_creacion nullable:true

@@ -3,6 +3,8 @@ grails:
     profile: rest-api
     codegen:
         defaultPackage: medicareapp
+    cors:
+        enabled: true
     spring:
         transactionManagement:
             proxies: false

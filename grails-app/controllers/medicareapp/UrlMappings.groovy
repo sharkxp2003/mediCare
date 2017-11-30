@@ -3,22 +3,56 @@ package medicareapp
 class UrlMappings {
 
     static mappings = {
-        delete "/$controller/$id(.$format)?"(action:"delete")
-        get "/$controller(.$format)?"(action:"index")
-        get "/$controller/$id(.$format)?"(action:"show")
-        post "/$controller(.$format)?"(action:"save")
-        put "/$controller/$id(.$format)?"(action:"update")
-        patch "/$controller/$id(.$format)?"(action:"patch")
 
         "/"(controller: 'application', action:'index')
-        "/categoria"(resources:"Categoria.Categoria")
-        "/encuesta"(resources:"Encuesta.Encuesta")
-        "/pregunta"(resources:"Pregunta.Pregunta")
 
-        "/respuesta"(resources:"Respuesta.Respuesta")
+        "/usuario"(resources: 'Usuario') {
+            "/encuesta"(resources: "Encuesta") {
+                "/categoria"(resources: "Categoria") {
+                    "/pregunta"(resources: "Pregunta") {
+                        "/respuesta"(resources: "Respuesta") {
+                            "/tiporespuesta"(resource: "Tipo_respuesta")
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        "/categoria"(resource: "Categoria") {
+            "/pregunta"(resource: "Pregunta.Pregunta") {
+                "/respuesta"(resource: "Respuesta.Respuesta") {
+                    "/tiporespuesta"(resource: "Tipo_respuesta.Tipo_respuesta")
+                }
+            }
+        }
+
+        "/encuesta"(resources:"Encuesta") {
+            "/categoria"(resource: "Categoria.Categoria") {
+                "/pregunta"(resource: "Pregunta.Pregunta") {
+                    "/respuesta"(resource: "Respuesta.Respuesta")
+                }
+            }
+        }
+
+
+        "/pregunta"(resources:"Pregunta") {
+            "/respuesta"(resources:"Respuesta.Respuesta") {
+                "/tiporespuesta"(resource: "Tipo_respuesta.Tipo_respuesta")
+            }
+        }
+
+        "/respuesta"(resources:"Respuesta")
         "/tipoRespuesta"(resources:"Tipo_respuesta.Tipo_respuesta")
-        "/tipoUsuario"(resources:"Tipo_usuario.Tipo_usuario")
-        "/usuario"(resources:"Usuario.Usuario")
+
+        "/tipousuario"(resources:"Tipo_usuario") {
+            "/usuario"(resources: "Usuario.Usuario")
+        }
+
+
+
+
 
 
         "500"(view: '/error')

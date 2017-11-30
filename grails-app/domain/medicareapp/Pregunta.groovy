@@ -8,6 +8,7 @@ class Pregunta {
     String nombre
     String f_creacion
     String f_mod
+    Categoria categoria
 
     static belongsTo = [categoria: Categoria]
     static hasMany = [respuesta : Respuesta]

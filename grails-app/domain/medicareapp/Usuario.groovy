@@ -3,6 +3,7 @@ package medicareapp
 import grails.rest.Resource
 
 @Resource(readOnly = false, formats = ['json', 'xml'])
+
 class Usuario {
 
     String nss
@@ -18,8 +19,7 @@ class Usuario {
     Date f_mod
 
 
-    static  belongsTo = [tipo_Usuario: Tipo_usuario];
-    static  hasMany = [encuesta: Encuesta];
+    static  hasMany = [encuesta: Encuesta]
 
     static constraints = {
         

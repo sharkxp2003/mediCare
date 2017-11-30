@@ -8,6 +8,7 @@ class Tipo_usuario {
     String nombre
     String descripcion
 
+    static hasMany = [usuario: Usuario]
     
     static constraints = {
 
