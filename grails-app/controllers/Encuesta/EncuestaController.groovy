@@ -26,7 +26,13 @@ class EncuestaController extends RestfulController{
         def encuestas =  usuario ? Encuesta.findAllByUsuario(usuario) : []
         respond encuestas
 
+    }
 
+    def getEncuestaByNombre () {
+        println getParams()
+        def nombre = params.nombre
+        def encuesta = Encuesta.findByNombre(nombre)
+        respond encuesta, view :'show'
     }
 
     def setEncuestaByUsuario() {

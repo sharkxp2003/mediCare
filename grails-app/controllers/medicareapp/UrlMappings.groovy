@@ -15,6 +15,8 @@ class UrlMappings {
         }
         "/usuario/username/$username"(controller: 'Usuario', action: 'getByUsername', method: 'GET')
 
+        "/encuesta/nombre/$nombre"(controller: 'Encuesta', action: 'getEncuestaByNombre', method: 'GET')
+
         "/encuesta"(resources:"Encuesta") {
             "/categoria"(controller: 'Categoria', action: 'getCategoriasByEncuesta', method: 'GET')
             "/categoria"(controller: 'Categoria', action: 'setCategoriaByEncuesta', method: 'POST')

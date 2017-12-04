@@ -12,5 +12,5 @@ json {
     uuid encuesta.uuid
     f_creacion encuesta.f_creacion
     f_mode encuesta.f_mod
-    Categoria g.render(encuesta.categoria,[deep:true])
+    categorias g.render(encuesta.categoria,[deep:true])
 }

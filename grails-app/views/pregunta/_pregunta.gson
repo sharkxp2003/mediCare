@@ -5,6 +5,6 @@ model {
     Pregunta pregunta
 }
 
-json g.render(pregunta)
+json g.render(pregunta,[excludes: 'categoria',deep:true])
 
 
