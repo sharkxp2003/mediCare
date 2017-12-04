@@ -1,8 +1,10 @@
 
 import medicareapp.Respuesta
+import medicareapp.Tipo_respuesta
 
 model {
     Respuesta respuesta
 }
 
 json g.render(respuesta)
+

@@ -7,6 +7,7 @@ import medicareapp.Encuesta
 import medicareapp.Pregunta
 import medicareapp.Respuesta
 import medicareapp.Usuario
+import grails.converters.JSON
 
 import java.text.SimpleDateFormat
 
@@ -24,6 +25,7 @@ class EncuestaController extends RestfulController{
         def usuario = Usuario.get(params.UsuarioId)
         def encuestas =  usuario ? Encuesta.findAllByUsuario(usuario) : []
         respond encuestas
+
 
     }
 

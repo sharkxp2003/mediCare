@@ -4,5 +4,5 @@ model {
     Iterable<Encuesta> encuestaList
 }
 
-json tmpl.encuesta(encuestaList ?: [])
-
+json tmpl.encuesta(encuestaList ?: [],deep:true)
+//json g.render(encuestaList ?: [],deep:true)

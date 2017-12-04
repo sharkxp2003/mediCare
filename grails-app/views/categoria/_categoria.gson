@@ -1,7 +1,8 @@
 import medicareapp.Categoria
+import medicareapp.Pregunta
 
 model {
     Categoria categoria
 }
 
-json g.render(categoria)
+json g.render(categoria,[excludes: 'encuesta'])

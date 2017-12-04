@@ -1,7 +1,16 @@
+import medicareapp.Categoria
 import medicareapp.Encuesta
 
 model {
     Encuesta encuesta
 }
 
-json g.render(encuesta)
+//json g.render(encuesta)
+
+json {
+    nombre encuesta.nombre
+    uuid encuesta.uuid
+    f_creacion encuesta.f_creacion
+    f_mode encuesta.f_mod
+    Categoria g.render(encuesta.categoria,[deep:true])
+}
