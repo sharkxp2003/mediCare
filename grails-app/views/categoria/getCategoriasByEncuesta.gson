@@ -1,0 +1,8 @@
+import medicareapp.Categoria
+
+model {
+    Iterable<Categoria> categoriaList
+}
+
+json tmpl.categoria(categoriaList ?: [])
+

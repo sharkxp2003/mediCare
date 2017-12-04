@@ -17,10 +17,10 @@ class Encuesta {
     
     static constraints = {
 
-        usuario nullable:false
+        usuario nullable:true
         
         uuid nullable:true
-        nombre nullable:true
+        nombre nullable:false
         f_creacion nullable:true
         f_mod nullable:true
         

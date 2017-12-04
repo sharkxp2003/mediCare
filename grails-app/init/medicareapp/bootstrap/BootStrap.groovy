@@ -3,6 +3,7 @@ package medicareapp.bootStrap
 import medicareapp.Categoria
 import medicareapp.Encuesta
 import medicareapp.Pregunta
+import medicareapp.Tipo_respuesta
 import medicareapp.Tipo_usuario
 import medicareapp.Usuario
 
@@ -33,14 +34,20 @@ class BootStrap {
         en1.addToCategoria(cat2)
         en2.addToCategoria(cat3)
 
-        //cat1.addToPregunta(pr1)
-        /*
+        cat1.addToPregunta(pr1)
+
         cat1.addToPregunta(pr2)
         cat1.addToPregunta(pr3)
 
         cat2.addToPregunta(pr4)
         cat2.addToPregunta(pr5)
-        */
+
+
+        def tr1 = new Tipo_respuesta(nombre: "Opción múltiple",descripcion: "De varias opciones, se pueden escoger varias opciones.").save()
+        def tr2 = new Tipo_respuesta(nombre: "Opción múltiple única",descripcion: "De varias opciones, solo se escoge una.").save()
+
+
+
 
 
 

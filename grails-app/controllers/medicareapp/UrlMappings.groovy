@@ -6,52 +6,32 @@ class UrlMappings {
 
         "/"(controller: 'application', action:'index')
 
+        "/tipousuario"(resources:"Tipo_usuario")
+
         "/usuario"(resources: 'Usuario') {
-            "/encuesta"(resources: "Encuesta") {
-                "/categoria"(resources: "Categoria") {
-                    "/pregunta"(resources: "Pregunta") {
-                        "/respuesta"(resources: "Respuesta") {
-                            "/tiporespuesta"(resource: "Tipo_respuesta")
-                        }
-                    }
-                }
-            }
+            "/encuesta"(controller: 'Encuesta', action: 'getEncuestaByUsuario', method: 'GET')
+            "/encuesta"(controller: 'Encuesta', action: 'setEncuestaByUsuario', method: 'POST')
+
         }
-
-
-
-        "/categoria"(resource: "Categoria") {
-            "/pregunta"(resource: "Pregunta.Pregunta") {
-                "/respuesta"(resource: "Respuesta.Respuesta") {
-                    "/tiporespuesta"(resource: "Tipo_respuesta.Tipo_respuesta")
-                }
-            }
-        }
+        "/usuario/username/$username"(controller: 'Usuario', action: 'getByUsername', method: 'GET')
 
         "/encuesta"(resources:"Encuesta") {
-            "/categoria"(resource: "Categoria.Categoria") {
-                "/pregunta"(resource: "Pregunta.Pregunta") {
-                    "/respuesta"(resource: "Respuesta.Respuesta")
-                }
-            }
+            "/categoria"(controller: 'Categoria', action: 'getCategoriasByEncuesta', method: 'GET')
+            "/categoria"(controller: 'Categoria', action: 'setCategoriaByEncuesta', method: 'POST')
         }
-
-
+        "/categoria"(resources: "Categoria") {
+            "/pregunta"(controller: 'Pregunta', action: 'getPreguntaByCategoria', method: 'GET')
+            "/pregunta"(controller: 'Pregunta', action: 'setPreguntaByCategoria', method: 'POST')
+        }
         "/pregunta"(resources:"Pregunta") {
-            "/respuesta"(resources:"Respuesta.Respuesta") {
-                "/tiporespuesta"(resource: "Tipo_respuesta.Tipo_respuesta")
-            }
+            "/respuesta"(controller: 'Respuesta', action: 'getRespuestaByPregunta', method: 'GET')
+            "/respuesta"(controller: 'Respuesta', action: 'setRespuestaByPregunta', method: 'POST')
         }
-
-        "/respuesta"(resources:"Respuesta")
-        "/tipoRespuesta"(resources:"Tipo_respuesta.Tipo_respuesta")
-
-        "/tipousuario"(resources:"Tipo_usuario") {
-            "/usuario"(resources: "Usuario.Usuario")
+        "/respuesta"(resources:"Respuesta") {
+            "/tipoRespuesta"(controller: 'Tipo_respuesta', action: 'getTiporespuestaByRespuesta', method: 'GET')
+            "/tipoRespuesta"(controller: 'Tipo_respuesta', action: 'setTiporespuestaByRespuesta', method: 'POST')
         }
-
-
-
+        "/tipoRespuesta"(resources:"Tipo_respuesta")
 
 
 

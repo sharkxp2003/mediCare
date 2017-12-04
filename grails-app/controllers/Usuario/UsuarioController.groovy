@@ -10,4 +10,10 @@ class UsuarioController extends RestfulController {
         super(Usuario)
     }
 
+    def getByUsername () {
+        Usuario user = Usuario.findByUsername(params.username)
+        println params.username
+        respond user ,view:'show'
+    }
+
 }
